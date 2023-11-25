@@ -12,7 +12,7 @@ module MediaInfo
 
     def initialize(input = nil)
       if input && input.include?('<?xml')
-        @xml = input.start_with?('<?xml') ? input : input.gsub(/(\n|.)*(\<\?xml)/,'<?xml')
+        @xml = input.scrub.gsub(/(\n|.)*(\<\?xml)/,'<?xml')
         @track_types = []
         @attribute_standardization_rules = YAML.load_file("#{Gem::Specification.find_by_name('mediainfo').gem_dir}/lib/attribute_standardization_rules.yml")
         # Populate Streams

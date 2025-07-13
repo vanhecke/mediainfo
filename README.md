@@ -1,10 +1,12 @@
-# MediaInfo [![Build Status](https://travis-ci.org/greatseth/mediainfo.svg?branch=master)](https://travis-ci.org/greatseth/mediainfo)
+# MediaInfo (FORK)
 
 MediaInfo is a class wrapping [the mediainfo CLI](http://mediainfo.sourceforge.net).
 
 ## Installation
 
-    $ gem install mediainfo
+In your Gemfile:
+
+    gem "mediainfo", github: 'vanhecke/mediainfo'
 
 ## Usage
 
